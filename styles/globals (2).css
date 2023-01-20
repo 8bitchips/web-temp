@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Aurebesh';
+    src: url('/fonts/aurebesh/Aurebesh.ttf');
+}
+@font-face {
+    font-family: 'ITC-serif';
+    src: url('/fonts/itc-serif-gothic/itc-serif-gothic-regular-588cef4e7134b.otf');
+}
+@font-face {
+    font-family: 'ITC-avant';
+    src: url('/fonts/ITCAvantGardeStd-Md.ttf');
+}
+@font-face {
+    font-family: 'star-hollow';
+    src: url('/fonts/starjedi/Starjhol.ttf');
+}
+@font-face {
+    font-family: 'star';
+    src: url('/fonts/starjedi/Starjedi.ttf');
+}
+
+@layer utilities {
+    .font-aurebesh {
+        font-family: 'Aurebesh', cursive;
+    }
+    .font-itc-serif {
+        font-family: 'ITC-serif';
+    }
+    .font-itc-avant {
+        font-family: 'ITC-avant';
+    }
+    .font-star-hollow {
+        font-family: 'star-hollow';
+    }
+    .font-star {
+        font-family: 'star';
+    }
+    .text-glow {
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+    }
+    .sponsor {
+        writing-mode: vertical-lr;
+    }
+}
+
+html,
+body {
+    font-family: 'ITC-avant';
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: url('/bg1.png');
+    /* background-color: red; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* display: grid; */
+    /* place-items: center; */
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* MARQUEE */
+
+.marquee {
+    writing-mode: vertical-lr;
+    /* makes the text vertical */
+    animation: marquee 10s linear infinite;
+    /* creates the scrolling effect */
+}
+
+/* the animation for the marquee */
+@keyframes marquee {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
